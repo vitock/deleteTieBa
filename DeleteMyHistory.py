@@ -13,14 +13,14 @@ from aes import AEScoder
 
 env_dist = os.environ # environ是在os.py中定义的一个dict environ = {}
 def loadCookie(sess):
-    if(env_dist.__contains__("cookiekey")):
+    if(env_dist.__contains__("COOKIEKEY")):
         print("KEYExist");
     else:
         print("NOKEY")
         exit(1)
 
     cookies = open("/".join([sys.path[0], "cookie.json.enc"])).read();
-    key =  env_dist["cookiekey"]
+    key =  env_dist["COOKIEKEY"]
     t = AEScoder(key);
     cookies = t.decrypt(cookies);
     cookies = cookies.replace("\n", "")
