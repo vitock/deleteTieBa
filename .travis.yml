@@ -9,6 +9,7 @@ python:
 install:
 - pip install -r requirements.txt
 script:
+- export 
 - python3 DeleteMyHistory.py
 env:
   global:
