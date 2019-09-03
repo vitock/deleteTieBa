@@ -20,9 +20,9 @@ def loadCookie(sess):
     else:
         print("NOKEY")
         exit(1)
-    print("SS" + env_dist[cookiekey])
+    print("SS" + env_dist["COOKIEKEY"])
     cookies = open("/".join([sys.path[0], "cookie.json.enc"])).read();
-    key =  env_dist[cookiekey]
+    key =  env_dist["COOKIEKEY"]
     t = AEScoder(key);
     cookies = t.decrypt(cookies);
     cookies = cookies.replace("\n", "")
