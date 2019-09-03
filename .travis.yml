@@ -3,12 +3,13 @@ git:
   depth: 3
 branches:
   only:
-    - master
+  - master
 python:
-  - "3.7"
-# command to install dependencies
+- '3.7'
 install:
-  - pip install -r requirements.txt
-# command to run tests
+- pip install -r requirements.txt
 script:
-  - python3 DeleteMyHistory.py 
+- python3 DeleteMyHistory.py
+env:
+  global:
+    secure: on2IiDFpaXe590RmJzyFxTAXqGuzsA9W8uECPu1jkdSlSPCETEkn4WqhPEbyIhVM2vT+UCIuZNFUlmtKxG+DlZ7odZWIBqAtva9/LFo7Y9jYmq/rhR51jaGehTB4jV0W6o7pa5tVetC0mrJnBK3v54Cx82/nloK1roUUrzozSz0TFPouUswAT+sbdksj0CN23ZRMW2wv/wKEDJExQGXU+UWbf3w7WnGuYB10lNRO1HYVu4PDD3J3gB7pxQ13TinfZX/ZLD4i5X0q1f+P1IxhRAqQLiMfE9l3H5LBQy2D5siE76pLWVvQwpi7goGdUET6Hrl6ccZ0ifjft8lI/bH0TmB3Sr2TrYNFkIZ68PbwJKRsvENNL//dhS3cpO4wIr+dmF6JudDwgz7xPdFUQsIJe5+QzJ37WyjGw5CJ6nZ9vdAUAN+cGVtvHy5+569JnohaMHpLDS6KC4D82hOpEeNzH+KPHEVpTJ5tSsVi1nhjKwtpe4kI9xqEODWjhQ0w0lvOSeP3ynV/mXbHe14R4/ZLOi4JnmEUBZqf8rtAMyv0QZECaSwkcc1jryjE426IXADNy96jH9sCUpDmJlgP7aTp706GWbj1nzx4yo+/wga8z3NaeYLNIfE+40WN682mDcVXQTsb2klV4igCdyVkEQKQ7OvKyhng1WgQFzZ1JALA8+E=
