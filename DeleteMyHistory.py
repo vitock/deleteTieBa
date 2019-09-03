@@ -12,17 +12,14 @@ import base64
 from aes import AEScoder
 
 env_dist = os.environ # environ是在os.py中定义的一个dict environ = {}
-def loadCookie(sess):
-    cookiekey = 'COOKIEKEY'
-    
-    if(env_dist.__contains__(cookiekey)):
+def loadCookie(sess):    
+    if(env_dist.__contains__('COOKIEKEY1') and env_dist.__contains__('COOKIEKEY2')):
         print("KEYExist");
     else:
         print("NOKEY")
         exit(1)
-    print("SS" + env_dist[cookiekey])
     cookies = open("/".join([sys.path[0], "cookie.json.enc"])).read();
-    key =  env_dist[cookiekey]
+    key =  env_dist['COOKIEKEY1'] + env_dist['COOKIEKEY2']
     t = AEScoder(key);
     cookies = t.decrypt(cookies);
     cookies = cookies.replace("\n", "")

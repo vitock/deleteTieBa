@@ -10,6 +10,7 @@ if __name__ == "__main__":
     # key =  env_dist["cookiekey"]
     print("您的cookie 加密密码:\n")
     key = str(uuid.uuid4());
+    key=key.replace("-","",100);
     print(key);
     t = AEScoder(key);
     p = open("/".join([sys.path[0], "cookie.json"])).read();
