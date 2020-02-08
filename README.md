@@ -1,14 +1,15 @@
 
-# 感谢 rmb122 的项目 [Delete-my-hisroy-in-tieba](https://github.com/rmb122/Delete-my-hisroy-in-tieba  ) 
-在此基础上做了一些改动，不需要 vps ，借助Travis 每天/周自动运行
-## Step0 fork 本项目到你自己的账户
+## 感谢 rmb122 的项目 [Delete-my-hisroy-in-tieba](https://github.com/rmb122/Delete-my-hisroy-in-tieba  ) 
+在此基础上做了一些改动，不需要 vps ，借助免费的Travis 每天/周自动运行
+## Step0 fork 本项目到你自己的github
 
 ## Step1 提取cookie
 使用Chrome 的 [EditThisCookie][2] 插件, 可以直接导出 JSON 下的 Cookie  ，保存在项目目录，文件名为 
 cookie.json
 
-然后在终端运行
-```
+然后在终端运行 (提前安装python3 )
+```python
+pip install -r requirements.txt // 第一次运行需要
 python3 test.py
 ```
 会自动生成加密的cookie信息，记住终端中打印的加密的key留作下一步使用
@@ -16,7 +17,7 @@ python3 test.py
 
 ```
 git add .
-git cm "cookie"
+git commit "cookie"
 git push origin master
 ```
 然后推送到github。
