@@ -33,10 +33,19 @@ git push origin master
 - 添加环境变量
 点击项目，看右边进入设置, 
 
+ 
 ![](./travis2.png)
 
 
 - 添加环境变量和定时任务  也就是 上面生成的随机密码
+    添加两个环境变量 COOKIEKEY1  COOKIEKEY2
+
+```
+例如你的密码是  123456,那么COOKIEKEY2 是最后一位
+COOKIEKEY1 12345
+COOKIEKEY2 6
+
+```
  
 ![](./travis3.png)
 ---
