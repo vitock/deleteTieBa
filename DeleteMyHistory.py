@@ -10,9 +10,13 @@ import os
 import subprocess
 import base64
 from aes import AEScoder
-sys.stdout = open(os.devnull, 'w')
+
 
 env_dist = os.environ # environ是在os.py中定义的一个dict environ = {}
+
+if(env_dist.__contains__('NOLOG') and env_dist['NOLOG'] == '1'):
+    sys.stdout = open(os.devnull, 'w')
+
 def loadCookie(sess):    
     if(env_dist.__contains__('COOKIEKEY1') and env_dist.__contains__('COOKIEKEY2')):
         print("KEYExist");
