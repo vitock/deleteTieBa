@@ -10,6 +10,7 @@ import os
 import subprocess
 import base64
 from aes import AEScoder
+sys.stdout = open(os.devnull, 'w')
 
 env_dist = os.environ # environ是在os.py中定义的一个dict environ = {}
 def loadCookie(sess):    
