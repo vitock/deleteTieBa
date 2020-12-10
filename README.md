@@ -1,4 +1,11 @@
 
+看到有个朋友foke之后把自己的cookie.json 文件也上传了,这样会有存在的泄露信息风险
+
+.gitignore里面写了  忽略这个2文件的,不知道他怎么上传的
+
+
+----
+
 ## 感谢 rmb122 的项目[Delete-my-hisroy-in-tieba][3]
 在此基础上做了一些改动，不需要 vps ，借助免费的[Travis][1] 每天/周自动运行(前提:你的项目是public,所以这里**加密**了cookie)
 ##  1. fork 本项目到你自己的github
