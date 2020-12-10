@@ -6,7 +6,8 @@ name: Python application
 
 on:
   schedule:
-    - cron: "11 8 * * 3/2"
+    #  每隔15天执行一次,如果你需要,设置其他值
+    - cron: "5 9 */15 * *"
   push:
     branches: [ master ]
   pull_request:
