@@ -7,11 +7,11 @@ name: Python application
 on:
   schedule:
     #  每隔15天执行一次,如果你需要,设置其他值
-    - cron: "35 1 1,11 * *"
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    - cron: "55 1 1,11 * *"
+  # push:
+    # branches: [ master ]
+  # pull_request:
+    # branches: [ master ]
 
 jobs:
   build:
