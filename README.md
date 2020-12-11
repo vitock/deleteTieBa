@@ -4,10 +4,15 @@
 .gitignore里面写了  忽略这个文件的,不知道他怎么上传的
 
 
+---
+## 改用 github action ,不用注册travis了
+ 
+
+
 ----
 
 ## 感谢 rmb122 的项目[Delete-my-hisroy-in-tieba][3]
-在此基础上做了一些改动，不需要 vps ，借助免费的[Travis][1] 每天/周自动运行(前提:你的项目是public,所以这里**加密**了cookie)
+~~在此基础上做了一些改动，不需要 vps ，借助免费的[Travis][1] 每天/周自动运行(前提:你的项目是public,所以这里**加密**了cookie)~~
 ##  1. fork 本项目到你自己的github
 
 ##  2. 提取cookie 并加密 cookie
@@ -30,18 +35,18 @@ git add .
 git commit "加密后的cookie"
 git push origin master
 ```
-## 3. 注册 [Travis][1] (可能要翻墙 ??)
-- 直接用github账号注册就可以了.
+## ~~3. 注册 [Travis][1] (可能要翻墙 ??)~~ 添加环境变量
+<!-- - 直接用github账号注册就可以了.
 - 然后在控制面板中 点击 "+"链接你的项目
 如图 
-![](./travis1.png)
+![](./travis1.png) -->
 
 
 - 添加环境变量
-点击项目，看右边进入设置, 
+   在 项目 setting  - secrets 中添加  COOKIEKEY1 COOKIEKEY1
 
- 
-![](./travis2.png)
+   ![](./setenv.webp)
+
 
 
 - 添加环境变量和定时任务  也就是 上面生成的随机密码
@@ -53,8 +58,7 @@ COOKIEKEY1 12345
 COOKIEKEY2 6
 
 ```
- 
-![](./travis3.png)
+
 ---
 
  
