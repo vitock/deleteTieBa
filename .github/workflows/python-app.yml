@@ -1,37 +1,37 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+# # This workflow will install Python dependencies, run tests and lint with a single version of Python
+# # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Python application
+# name: Python application
 
 
-on:
-  schedule:
-    #  每隔15天执行一次,如果你需要,设置其他值
-    - cron: "10 5 1,16 * *"
-  # push:
-    # branches: [ master ] 
-  # pull_request:
-    # branches: [ master ]
+# on:
+#   schedule:
+#     #  每隔15天执行一次,如果你需要,设置其他值
+#     - cron: "10 5 1,16 * *"
+#   # push:
+#     # branches: [ master ] 
+#   # pull_request:
+#     # branches: [ master ]
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Run
-      env:
-        NOLOG: '1'
-        COOKIEKEY1: ${{ secrets.COOKIEKEY1 }}
-        COOKIEKEY2: ${{ secrets.COOKIEKEY2 }}
-      run: |
-        python DeleteMyHistory.py
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Set up Python 3.8
+#       uses: actions/setup-python@v2
+#       with:
+#         python-version: 3.8
+#     - name: Install dependencies
+#       run: |
+#         python -m pip install --upgrade pip
+#         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+#     - name: Run
+#       env:
+#         NOLOG: '1'
+#         COOKIEKEY1: ${{ secrets.COOKIEKEY1 }}
+#         COOKIEKEY2: ${{ secrets.COOKIEKEY2 }}
+#       run: |
+#         python DeleteMyHistory.py
