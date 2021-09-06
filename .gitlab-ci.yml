@@ -8,6 +8,6 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: delete tieba
   script:
-    - echo "Compiling the code..."
+    - python3 DeleteMyHistory.py
     - echo "Compile complete."
 
