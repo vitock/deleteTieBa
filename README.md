@@ -1,4 +1,9 @@
 
+# 换到 gitlab了
+github action 封号
+traivs 收费了
+--- 
+
 看到有个朋友fork之后把自己的cookie.json 文件也上传了,这样会有存在的泄露信息风险
 
 .gitignore里面写了  忽略这个文件的,不知道他怎么上传的
