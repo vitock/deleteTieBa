@@ -19,12 +19,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 3.10
+    - name: Set up Python 
       uses: actions/setup-python@v3
       with:
         python-version: "3.9.5"
     - name: Install dependencies
       run: |
+        python --version
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: DeletePosts
