@@ -28,7 +28,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint with flake8
+    - name: DeletePosts
+      env:
+        COOKIEKEY1: '${{ secrets.COOKIEKEY1 }}'
+        COOKIEKEY2: '${{ secrets.COOKIEKEY2 }}'
+          
       run: |
         # stop the build if there are Python syntax errors or undefined names
         python DeleteMyHistory.py 
